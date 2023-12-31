@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.outerdiv {
+  width: 100%;
+  height: 100vh;
+}
+.innerdiv {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+.form-sidebar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 25%;
+  justify-content: center;
+  position: fixed;
+  background-image: url("./assets/images/bg-sidebar-mobile.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  border: 1px solid red;
+}
+.circle {
+  border: 1px solid white;
+  padding: 0.5em;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  border-radius: 100em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1.6em;
+}
+.page-1,
+.page-2,
+.page-3,
+.page-4,
+.page-5 {
+  position: relative;
+  border: 1px solid red;
+  width: 90%;
+  top: 17%;
+  height: 45%;
+  padding-top: 5%;
+  background-color: white;
+  display: none;
+  /* padding-left: 5%; */
+  /* margin-left: 2%; */
+  /* padding-top: 5%; */
+}
+#p1 {
+  display: block;
+}
+
+#p2 {
+  padding-left: 5%;
+  height: 65%;
+}
+#p3 {
+  height: 65%;
+}
+.step-content {
+  display: none;
+}
+.button1 {
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+.Arcadeplan,
+.Advanceplan,
+.Proplan {
+  display: flex;
+  width: 80%;
+  padding: 4.5%;
+  margin-bottom: 3%;
+  border-radius: 0.6em;
+  border: 1px solid red;
+}
+
+.box {
+  display: flex;
+  border: 1px solid black;
+  height: 10%;
+  margin-top: 2%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#b1 {
+  margin-top: 8%;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+}
+
+.selection-box {
+  margin-top: 10%;
+  width: 80%;
+  padding-left: 10%;
+}
+.selected-plan {
+  display: flex;
+  justify-content: space-between;
+}
+
+.selected-services,
+.selected-prices {
+  display: flex;
+  flex-direction: column;
+}
+.addons {
+  display: flex;
+  justify-content: space-between;
+}
+/* .next {
+  left: 60%;
+} */
+
+@media (min-width: 1024px) {
+  body {
+    background-color: var(--Magnolia);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
+  }
+
+  .outerdiv {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--White);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 1px black;
+    border: 1px solid black;
+  }
+
+  .innerdiv {
+    display: flex;
+    padding: 1rem;
+    width: 70%;
+    height: 75%;
+    border: 1px solid red;
+  }
+
+  .form-sidebar {
+    background-image: url("./assets/images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    width: 38%;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 1px solid black;
+  }
+  .page1 {
+    border: 1px solid red;
+    /* margin-left: 2%; */
+    padding-top: 5%;
+  }
+}
+
+/* .button {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  right: 0;
+  left: 0;
+  height: 12%;
+  padding-inline: 1rem;
+  z-index: 5;
+} */
+/* .next {
+  position: relative;
+  left: 77%;
+  top: 20%;
+  background-color: blue;
+  padding: 2.3%;
+} */
