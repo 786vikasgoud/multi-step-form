@@ -11,6 +11,12 @@ for (let i = 1; i <= 5; i++) {
   page.push(document.getElementsByClassName(`page-${i}`)[0]);
 }
 
+// jjfjfjfjf
+
+// page[0].style.display = "none";
+
+// jfjfhjfkf
+
 let back = document.getElementsByClassName("back1")[0];
 // back.style.display = "none";
 back.style.opacity = 0;

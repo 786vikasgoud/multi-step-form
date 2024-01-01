@@ -101,7 +101,8 @@
                 <p class="Arcade">Arcade</p>
                 <p class="price">$9/mo</p>
                 <p class="yearly">$90/yr</p>
-                <p class="offer">2 months free</p>
+                <small class="offer">2 months free</small>
+                <!-- <p class="offer">2 months free</p> -->
               </div>
             </div>
             <div class="plan Advanceplan">
@@ -110,7 +111,7 @@
                 <p>Advanced</p>
                 <p class="price">$12/mo</p>
                 <p class="yearly">$120/yr</p>
-                <p class="offer">2 months free</p>
+                <small class="offer">2 months free</small>
               </div>
             </div>
             <div class="plan Proplan">
@@ -119,7 +120,8 @@
                 <p>Pro</p>
                 <p class="price">$15/mo</p>
                 <p class="yearly">$150/yr</p>
-                <p class="offer">2 months free</p>
+                <small class="offer">2 months free</small>
+                <!-- <p class="offer">2 months free</p> -->
               </div>
             </div>
           </div>
@@ -129,7 +131,7 @@
             <div class="switch">
               <input type="checkbox" />
             </div>
-            <p class="yearly">Yearly</p>
+            <p class="yearly1">Yearly</p>
           </div>
         </div>
 
@@ -146,28 +148,28 @@
               <input type="checkbox" id="Online service" />
               <div class="description">
                 <label class="online">Online service</label>
-                <small>Access to multiplayer games</small>
+                <small class="s">Access to multiplayer games</small>
               </div>
-              <p class="price">+$1/mo</p>
-              <p class="yearly">+$10/yr</p>
+              <p class="price" id="price2">+$1/mo</p>
+              <p class="yearly" id="price2">+$10/yr</p>
             </div>
             <div class="box" id="b2">
               <input type="checkbox" id="Larger storage" />
-              <div class="description">
+              <div class="description" id="ll">
                 <label class="larger">Larger storage</label>
-                <small>Extra 1TB of cloud save</small>
+                <small class="s">Extra 1TB of cloud save</small>
               </div>
-              <p class="price">+$2/mo</p>
-              <p class="yearly">+$20/yr</p>
+              <p class="price" id="price2">+$2/mo</p>
+              <p class="yearly" id="price2">+$20/yr</p>
             </div>
             <div class="box" id="b3">
               <input type="checkbox" id="Customizable profile" />
               <div class="description">
                 <label class="customizable">Customizable Profile</label>
-                <small>Custom theme on your profile</small>
+                <small class="s">Custom theme on your profile</small>
               </div>
-              <p class="price">+$2/mo</p>
-              <p class="yearly">+$20/yr</p>
+              <p class="price" id="price2">+$2/mo</p>
+              <p class="yearly" id="price2">+$20/yr</p>
             </div>
           </div>
         </div>
@@ -204,22 +206,28 @@
                 </div>
               </div>
             </div>
-            <p class="total">
-              Total (per month) <b class="totalpricex">+$12/mo</b>
-            </p>
-            <p class="totalprice">
-              <b>+12/mo</b>
-            </p>
+            <div class="calculation">
+              <p class="total">
+                Total (per month) <b class="totalpricex">+$12/mo</b>
+              </p>
+              <p class="totalprice">
+                <b>+12/mo</b>
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- page5 -->
 
         <div class="page-5" id="p5">
-          <img src="./assets/images/icon-thank-you.svg" alt="logo" />
+          <img
+            class="img"
+            src="./assets/images/icon-thank-you.svg"
+            alt="logo"
+          />
           <div class="header">
             <h1 class="title">Thank you!</h1>
-            <p class="info">
+            <p class="info" id="i">
               Thanks for confirming your subscription! We hope you have fun
               using our platform. If you ever need support, please feel free to
               email us venkatarvindrapv@gmail.com.
