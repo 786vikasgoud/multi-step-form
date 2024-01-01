@@ -11,11 +11,14 @@ for (let i = 1; i <= 5; i++) {
   page.push(document.getElementsByClassName(`page-${i}`)[0]);
 }
 
+let back = document.getElementsByClassName("back1")[0];
+// back.style.display = "none";
+back.style.opacity = 0;
+
 var next = document.getElementsByClassName("next1");
 next[0].addEventListener("click", nextPage);
 
 var clickCount = 0;
-
 function nextPage(e) {
   if (clickCount === 0) {
     displayCard2();
@@ -24,7 +27,6 @@ function nextPage(e) {
     displayCard3();
     clickCount++;
   } else if (clickCount === 2) {
-    console.log(objet);
     displayCard4();
     clickCount++;
   } else if (clickCount === 3) {
@@ -35,6 +37,8 @@ function nextPage(e) {
 function displayCard2() {
   page[0].style.display = "none"; //1
   page[1].style.display = "block"; //2
+  back.style.display = "block";
+  back.style.opacity = 100;
 }
 function displayCard3() {
   page[1].style.display = "none";
@@ -48,6 +52,35 @@ function displayCard4() {
 function displayCard5() {
   page[3].style.display = "none";
   page[4].style.display = "block";
+  next[0].style.display = "none";
+  back.style.display = "none";
+}
+
+back.addEventListener("click", backstep);
+function backstep() {
+  if (clickCount === 0) {
+    // back.style.display = "none";
+    back.style.opacity = 0;
+    page[0].style.display = "block";
+  } else if (clickCount === 1) {
+    clickCount--;
+    page[1].style.display = "none";
+    page[0].style.display = "block";
+    // back.style.display = "none";
+    back.style.opacity = 0;
+  } else if (clickCount === 2) {
+    clickCount--;
+    page[2].style.display = "none";
+    page[1].style.display = "block";
+  } else if (clickCount === 3) {
+    clickCount--;
+    page[3].style.display = "none";
+    page[2].style.display = "block";
+  } else if (clickCount === 4) {
+    clickCount--;
+    page[4].style.display = "none";
+    page[3].style.display = "block";
+  }
 }
 
 /////////////////////////
@@ -225,5 +258,4 @@ function createCard4() {
     am = `+$${amount}/mo`;
   }
   totalprice[0].innerText = am;
-  //   console.log(am);
 }
