@@ -390,8 +390,8 @@ body {
     top: -7%;
     left: 30%;
   }
-  .page-2 {
-  }
+  /* .page-2 {
+  } */
   .selected {
     display: flex;
     width: 85%;
