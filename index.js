@@ -11,12 +11,15 @@ let page = [];
 for (let i = 1; i <= 5; i++) {
   page.push(document.getElementsByClassName(`page-${i}`)[0]);
 }
+// circle colour
 
-// jjfjfjfjf
+let circle = document.querySelectorAll(".circle");
+// console.log(circle[0]);
+circle[0].backgroundColor = "hsl(206, 94%, 87%)";
+console.log(circle[0]);
+circle[0].backgroundColor = "black";
 
-// page[0].style.display = "none";
-
-// jfjfhjfkf
+//
 
 let back = document.getElementsByClassName("back1")[0];
 // back.style.display = "none";
