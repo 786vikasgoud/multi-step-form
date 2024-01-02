@@ -72,7 +72,7 @@ body {
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 1.6em;
-  background-color: var(--Light-blue);
+  /* background-color: var(--Light-blue); */
 }
 .page-1,
 .page-2,

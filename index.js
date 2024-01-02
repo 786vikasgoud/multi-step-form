@@ -14,10 +14,9 @@ for (let i = 1; i <= 5; i++) {
 // circle colour
 
 let circle = document.querySelectorAll(".circle");
+
+circle[0].style.backgroundColor = "hsl(206, 94%, 87%)";
 // console.log(circle[0]);
-circle[0].backgroundColor = "hsl(206, 94%, 87%)";
-console.log(circle[0]);
-circle[0].backgroundColor = "black";
 
 //
 
@@ -31,9 +30,11 @@ next[0].addEventListener("click", nextPage);
 var clickCount = 0;
 function nextPage(e) {
   if (clickCount === 0) {
+    circle[clickCount].style.backgroundColor = "rgba(255, 0, 0, 0)";
     displayCard2();
     clickCount++;
   } else if (clickCount === 1) {
+    circle[clickCount].style.backgroundColor = "rgba(255, 0, 0, 0)";
     if (alertselected === 0) {
       alert("please select the plan");
       return;
@@ -41,9 +42,11 @@ function nextPage(e) {
     displayCard3();
     clickCount++;
   } else if (clickCount === 2) {
+    circle[clickCount].style.backgroundColor = "rgba(255, 0, 0, 0)";
     displayCard4();
     clickCount++;
   } else if (clickCount === 3) {
+    circle[clickCount].style.backgroundColor = "rgba(255, 0, 0, 0)";
     displayCard5();
   }
 }
@@ -53,10 +56,12 @@ function displayCard2() {
   page[1].style.display = "block"; //2
   back.style.display = "block";
   back.style.opacity = 100;
+  circle[1].style.backgroundColor = "hsl(206, 94%, 87%)";
 }
 function displayCard3() {
   page[1].style.display = "none";
   page[2].style.display = "block";
+  circle[2].style.backgroundColor = "hsl(206, 94%, 87%)";
 
   // next[0].innerText = "Next step";
 }
@@ -65,37 +70,45 @@ function displayCard4() {
   createCard4();
   next[0].innerText = "conform";
   page[3].style.display = "block";
+  circle[3].style.backgroundColor = "hsl(206, 94%, 87%)";
 }
 function displayCard5() {
   page[3].style.display = "none";
   page[4].style.display = "block";
   next[0].style.display = "none";
   back.style.display = "none";
+  circle[3].style.backgroundColor = "hsl(206, 94%, 87%)";
 }
 
 back.addEventListener("click", backstep);
 function backstep() {
   if (clickCount === 0) {
-    // back.style.display = "none";
     back.style.opacity = 0;
     page[0].style.display = "block";
   } else if (clickCount === 1) {
+    circle[clickCount].style.backgroundColor = "rgba(255, 0, 0, 0)";
     clickCount--;
+    circle[clickCount].style.backgroundColor = "hsl(206, 94%, 87%)";
     page[1].style.display = "none";
     page[0].style.display = "block";
-    // back.style.display = "none";
     back.style.opacity = 0;
   } else if (clickCount === 2) {
+    circle[clickCount].style.backgroundColor = "rgba(255, 0, 0, 0)";
     clickCount--;
+    circle[clickCount].style.backgroundColor = "hsl(206, 94%, 87%)";
     page[2].style.display = "none";
     page[1].style.display = "block";
   } else if (clickCount === 3) {
+    circle[clickCount].style.backgroundColor = "rgba(255, 0, 0, 0)";
     clickCount--;
+    circle[clickCount].style.backgroundColor = "hsl(206, 94%, 87%)";
     page[3].style.display = "none";
     page[2].style.display = "block";
     next[0].innerText = "Next step";
   } else if (clickCount === 4) {
+    circle[clickCount].style.backgroundColor = "rgba(255, 0, 0, 0)";
     clickCount--;
+    circle[clickCount].style.backgroundColor = "hsl(206, 94%, 87%)";
     page[4].style.display = "none";
     page[3].style.display = "block";
   }
