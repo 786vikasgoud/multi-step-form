@@ -5,6 +5,7 @@ let objet = {
   service: [],
 };
 let amount = 0;
+let alertselected = 0;
 //   document.getElementsByClassName("page-1")[0].style.display = "none";
 let page = [];
 for (let i = 1; i <= 5; i++) {
@@ -30,6 +31,10 @@ function nextPage(e) {
     displayCard2();
     clickCount++;
   } else if (clickCount === 1) {
+    if (alertselected === 0) {
+      alert("please select the plan");
+      return;
+    }
     displayCard3();
     clickCount++;
   } else if (clickCount === 2) {
@@ -150,7 +155,7 @@ let plan = document.querySelectorAll(".selected")[0];
 plan.addEventListener("click", planselected);
 function planselected(e) {
   let name = e.target.className;
-
+  alertselected = 1;
   //
   let chbackground = document.querySelectorAll(".selected");
   let chang = document.getElementsByClassName(e.target.className);
