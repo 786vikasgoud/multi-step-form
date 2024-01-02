@@ -49,10 +49,13 @@ function displayCard2() {
 function displayCard3() {
   page[1].style.display = "none";
   page[2].style.display = "block";
+
+  // next[0].innerText = "Next step";
 }
 function displayCard4() {
   page[2].style.display = "none";
   createCard4();
+  next[0].innerText = "conform";
   page[3].style.display = "block";
 }
 function displayCard5() {
@@ -82,6 +85,7 @@ function backstep() {
     clickCount--;
     page[3].style.display = "none";
     page[2].style.display = "block";
+    next[0].innerText = "Next step";
   } else if (clickCount === 4) {
     clickCount--;
     page[4].style.display = "none";
@@ -180,10 +184,12 @@ function Arcadeplan() {
 }
 function Proplan() {
   if (alpa === true) {
+    console.log("mo");
     objet.planname = "Pro";
     objet.period = "Monthly";
     objet.price = "$15/mo";
   } else {
+    console.log("yr");
     objet.planname = "Pro";
     objet.period = "Yearly";
     objet.price = "$150/yr";
@@ -257,8 +263,9 @@ function createCard4() {
       console.log(price[i]);
     }
   }
+  let check = amount;
   amount = amount + Number(am);
-  if (amount > 9) {
+  if (check > 9) {
     am = `+$${amount}/yr`;
   } else {
     am = `+$${amount}/mo`;
