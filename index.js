@@ -68,7 +68,7 @@ function displayCard3() {
 function displayCard4() {
   page[2].style.display = "none";
   createCard4();
-  next[0].innerText = "conform";
+  next[0].innerText = "confirm";
   page[3].style.display = "block";
   circle[3].style.backgroundColor = "hsl(206, 94%, 87%)";
 }
