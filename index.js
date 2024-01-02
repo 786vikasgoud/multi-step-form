@@ -6,6 +6,7 @@ let objet = {
 };
 let amount = 0;
 let alertselected = 0;
+let backpressed = 0;
 //   document.getElementsByClassName("page-1")[0].style.display = "none";
 let page = [];
 for (let i = 1; i <= 5; i++) {
@@ -105,6 +106,7 @@ function backstep() {
     page[3].style.display = "none";
     page[2].style.display = "block";
     next[0].innerText = "Next step";
+    backpressed = 1;
   } else if (clickCount === 4) {
     circle[clickCount].style.backgroundColor = "rgba(255, 0, 0, 0)";
     clickCount--;
@@ -175,7 +177,7 @@ function planselected(e) {
   //
   let chbackground = document.querySelectorAll(".selected");
   let chang = document.getElementsByClassName(e.target.className);
-  // console.log(chbackground[0].children[1]);
+
   for (let i = 0; i < 3; i++) {
     chbackground[0].children[i].style.backgroundColor = "white";
   }
@@ -297,10 +299,14 @@ function createCard4() {
   }
   let check = amount;
   amount = amount + Number(am);
+  if (backpressed === 1) {
+    amount = Number(amount) / 2;
+  }
   if (check > 9) {
     am = `+$${amount}/yr`;
   } else {
     am = `+$${amount}/mo`;
   }
+  console.log(typeof am);
   totalprice[0].innerText = am;
 }
