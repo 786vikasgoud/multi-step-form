@@ -150,6 +150,17 @@ let plan = document.querySelectorAll(".selected")[0];
 plan.addEventListener("click", planselected);
 function planselected(e) {
   let name = e.target.className;
+
+  //
+  let chbackground = document.querySelectorAll(".selected");
+  let chang = document.getElementsByClassName(e.target.className);
+  // console.log(chbackground[0].children[1]);
+  for (let i = 0; i < 3; i++) {
+    chbackground[0].children[i].style.backgroundColor = "white";
+  }
+  chang[0].style.backgroundColor = "hsl(229, 24%, 87%)";
+  //
+
   if (name === "plan Advanceplan") {
     Advanceplan();
   } else if (name === "plan Arcadeplan") {
