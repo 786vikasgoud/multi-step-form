@@ -119,6 +119,7 @@ body {
   margin-bottom: 3%;
   border-radius: 0.6em;
   border: 1px solid var(--Light-gray);
+  cursor: pointer;
 }
 .planselect {
   display: flex;
@@ -185,6 +186,7 @@ body {
   justify-content: space-around;
   align-items: center;
   border: 1px solid var(--Light-gray);
+  cursor: pointer;
 }
 
 .larger,
@@ -307,6 +309,12 @@ body {
   border: 1px solid var(--Purplish-blue);
 }
 
+.Arcadeplan:active,
+.Arcadeplan:focus {
+  background-color: var(--Light-gray);
+  border: 1px solid var(--Purplish-blue);
+}
+
 /* media query */
 
 @media (min-width: 1024px) {
@@ -406,6 +414,7 @@ body {
     justify-content: space-around;
     width: 25%;
     margin-left: 4%;
+    cursor: pointer;
     border: 1px solid black;
   }
   .Arcadeplan {
