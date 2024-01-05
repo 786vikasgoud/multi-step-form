@@ -310,3 +310,4 @@ function createCard4() {
   console.log(typeof am);
   totalprice[0].innerText = am;
 }
+str = str + e.target.value;
